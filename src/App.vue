@@ -1,6 +1,11 @@
 <script >
 //  import RepoList from "./components/ReposList"
+import NavigationBar from './components/NavigationBar.vue';
 export default{
+   components: {
+    NavigationBar
+
+  },
  
   data(){
     return {
@@ -14,8 +19,12 @@ export default{
 </script>
 
 <template>
- <router-view></router-view>
+  <div class="container">
+    <navigation-bar/>
 
+    <router-view></router-view>
+    
+  </div>
   
 </template>
 

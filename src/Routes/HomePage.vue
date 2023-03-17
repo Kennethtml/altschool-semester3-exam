@@ -1,7 +1,7 @@
 <script >
-//  import RepoList from "./components/ReposList"
+
 export default{
- 
+
   data(){
     return {
       user:null
@@ -47,13 +47,13 @@ export default{
               Following: <span>{{user.following}}</span>
             </p>
             <p className="public_repos">
-              Public repos:{" "}
+              Public repos:
               <span>{{user.public_repos}}</span>
             </p>
-            <button>
+           
 
-            <router-link to="/repos"> view repos</router-link>
-            </button>
+            <router-link class="btn-link" to="/repos"> view repos</router-link>
+           
            
           </div>
           </div>
