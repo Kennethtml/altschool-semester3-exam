@@ -1,9 +1,11 @@
 <script >
 //  import RepoList from "./components/ReposList"
 import NavigationBar from './components/NavigationBar.vue';
+import PageFooter from './components/PageFooter.vue'
 export default{
    components: {
-    NavigationBar
+    NavigationBar,
+    PageFooter
 
   },
  
@@ -23,6 +25,7 @@ export default{
     <navigation-bar/>
 
     <router-view></router-view>
+    <page-footer/>
     
   </div>
   
@@ -37,7 +40,7 @@ export default{
 }
 a{
   text-decoration :none;
-  
+
 }
 body{
   font-family: 'Poppins', sans-serif;

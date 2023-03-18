@@ -5,6 +5,14 @@ import HomePage from "@/Routes/HomePage.vue"
 import ReposPage from "@/Routes/ReposPage.vue";
 import RepoPage from "@/Routes/RepoPage.vue"
 import ErrorPageVue from './Routes/ErrorPage.vue';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
+
+
+/* add icons to the library */
+library.add(faUserSecret)
+
 const router = createRouter({
   history: createWebHistory(),
   routes: [
@@ -31,4 +39,7 @@ const router = createRouter({
   ],
 });
 
-createApp(App).use(router).mount('#app')
+createApp(App)
+  .use(router)
+  .component("font-awesome-icon", FontAwesomeIcon)
+  .mount("#app");

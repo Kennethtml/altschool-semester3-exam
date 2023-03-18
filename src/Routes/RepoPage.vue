@@ -1,7 +1,11 @@
 <template>
    <main className="selected-repo">
         <div className="btn-wrapper">
-          <ReturnButton />
+            
+      <router-link to="/"  class="btn-wrapper" >
+        <p> &larr;
+            Back</p>
+      </router-link>
         </div>
     <h1>{{repo.name}}</h1>
         <p>
@@ -22,11 +26,11 @@
 
           <div className="stats">
             <div className="stats-fork">
-              <Fork />
+              <p class="forks">forks:</p>
               <span>{{repo.forks_count}}</span>
             </div>
             <div className="stats-star">
-              <Star />
+              <p class="stars"> stars:</p>
               <span>{{repo.stargazers_count}}</span>
             </div>
           </div>
@@ -53,3 +57,10 @@ export default{
     
 }
 </script>
+<style scoped>
+.forks,.stars{
+  font-weight:700;
+  display:inline;
+  margin-right:5px;
+}
+</style>

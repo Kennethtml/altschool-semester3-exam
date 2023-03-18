@@ -28,18 +28,22 @@ export default {
 
 <template>
   <section class="repos-container">
-    <router-link to="/"  class="btn-wrapper">
-          Return button
+    
+    <router-link to="/"  class="btn-wrapper" >
+      <p> &larr;
+          Back</p>
     </router-link>
 
-    <div class="repos">
-      <li class="repo" v-for="repo in filteredRepos" :key="repo.name">
-        <router-link class="repo" :to="`repos/${repo.name}`">
+    <h3 v-if="repos.length <= 0" class="loading">Loading...</h3>
+
+    <div v-else class="repos">
+      
+        <router-link class="repo" v-for="repo in filteredRepos" :key="repo.name" :to="`repos/${repo.name}`">
           <h3 className="name">{{ repo.name }}</h3>
           <p className="description">{{ repo.description }}</p>
           <p className="language">{{ repo.language }}</p>
         </router-link>
-      </li>
+    
     </div>
 
     <div class="pagination">

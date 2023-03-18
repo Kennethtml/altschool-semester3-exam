@@ -28,7 +28,7 @@ export default{
  
 
   <main>
-   <div v-if="!user">LOADING</div>
+   <h2 v-if="!user" class="loading">LOADING</h2>
      <div v-else className="profile-container">
         <div className="profile">
           <div className="image">
@@ -72,6 +72,12 @@ header {
 .logo {
   display: block;
   margin: 0 auto 2rem;
+}
+.loading{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
 }
 
 @media (min-width: 1024px) {
