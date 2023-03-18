@@ -4,6 +4,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomePage from "@/Routes/HomePage.vue"
 import ReposPage from "@/Routes/ReposPage.vue";
 import RepoPage from "@/Routes/RepoPage.vue"
+import ErrorPageVue from './Routes/ErrorPage.vue';
 const router = createRouter({
   history: createWebHistory(),
   routes: [
@@ -21,6 +22,11 @@ const router = createRouter({
       path: "/repos/:id",
       name: "RepoPage",
       component: RepoPage,
+    },
+    {
+      path: "/:pathMatch(.*)*",
+      name: "NotFound",
+      component: ErrorPageVue,
     },
   ],
 });

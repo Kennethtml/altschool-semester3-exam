@@ -28,13 +28,13 @@ export default {
 
 <template>
   <section class="repos-container">
-    <div className="btn-wrapper">
+    <router-link to="/"  class="btn-wrapper">
           Return button
-        </div>
+    </router-link>
 
     <div class="repos">
       <li class="repo" v-for="repo in filteredRepos" :key="repo.name">
-        <router-link :to="`repos/${repo.name}`">
+        <router-link class="repo" :to="`repos/${repo.name}`">
           <h3 className="name">{{ repo.name }}</h3>
           <p className="description">{{ repo.description }}</p>
           <p className="language">{{ repo.language }}</p>
